@@ -14,7 +14,7 @@ USER root
 
 # プロジェクトファイルをコピー
 COPY Makefile /root/src/Makefile
-WORKDIR /root/src/Makefile
+WORKDIR /root/src
 # Makeコマンドを実行してjarをビルド
 RUN make jar
 
