@@ -1,4 +1,7 @@
 FROM python:3.10.7
+
+RUN apt-get update && apt-get install -y openjdk-17-jdk
+
 # Pythonのコマンドを使えるようにするために、pythonのイメージでUSERを再設定
 USER root
 
