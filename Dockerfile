@@ -1,6 +1,4 @@
 FROM python:3.10.7
-FROM openjdk:17
-
 # Pythonのコマンドを使えるようにするために、pythonのイメージでUSERを再設定
 USER root
 
