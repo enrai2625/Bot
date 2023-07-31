@@ -18,7 +18,7 @@ ENV TERM xterm
 RUN mkdir -p /root/src
 COPY . /root/src
 COPY . /root
-WORKDIR /root/src
+WORKDIR /root
 
 # Docker内で扱うffmpegをインストール
 RUN apt-get install -y ffmpeg
