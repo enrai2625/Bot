@@ -13,6 +13,6 @@ public class OriginalDiceBotTableTest extends TestCase {
 		OriginalDiceBotTable a = client.getDiceBot("サンプルダイスボット-ラーメン表");
 		assertFalse(a.isValid);
 		OriginalDiceBotTable b = client.getDiceBot("サンプルダイスボット-夜食表");
-		assertTrue(c.isValid);
+		assertTrue(b.isValid);
 	}
 }
