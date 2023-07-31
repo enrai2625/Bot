@@ -1,4 +1,4 @@
-FFROM python:3.10.7-slim
+FROM python:3.10.7-slim
 
 # Makeコマンドをインストール
 RUN apt-get update && apt-get install -y make
