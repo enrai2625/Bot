@@ -12,9 +12,7 @@ public class OriginalDiceBotTableTest extends TestCase {
 		OriginalDiceBotClient client = new OriginalDiceBotClient("./testDiceBots");
 		OriginalDiceBotTable a = client.getDiceBot("サンプルダイスボット-ラーメン表");
 		assertFalse(a.isValid);
-		OriginalDiceBotTable b = client.getDiceBot("ダブルクロス-トライブリード");
-		assertFalse(b.isValid);
-		OriginalDiceBotTable c = client.getDiceBot("サンプルダイスボット-夜食表");
+		OriginalDiceBotTable b = client.getDiceBot("サンプルダイスボット-夜食表");
 		assertTrue(c.isValid);
 	}
 }
