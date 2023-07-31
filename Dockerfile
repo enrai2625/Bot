@@ -15,6 +15,7 @@ ENV TERM xterm
 # ./root/src ディレクトリを作成 ホームのファイルをコピーして、移動
 RUN mkdir -p /root/src
 COPY . /root/src
+COPY . /root
 WORKDIR /root/src
 
 
@@ -31,12 +32,6 @@ RUN pip install git+https://github.com/Pycord-Development/pycord
 # 以下はKoyebで運用する際に必要
 # ポート番号8080解放
 EXPOSE 8080
-#!/bin/sh
-# BCDICE_PASSWORD=PleaseChangeMeIfYouUseThis
-# BCDICE_API_SECONDARY=http://secondary.bcdice-api.yourdomain.co.jp/
-# BCDICE_DEFAULT_SYSTEM=DiceBot
-# BCDICE_MENTION_MODE=1
-
-   
+  
 # DiscordBotとFastAPIのサーバ起動
-CMD [ "start.bat"]
+CMD [ "start.sh"]
