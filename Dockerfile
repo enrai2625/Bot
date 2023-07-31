@@ -1,5 +1,8 @@
 FROM python:3.10.7-slim
 
+# Makeコマンドをインストール
+RUN apt-get update && apt-get install -y make
+
 # gitをインストール
 RUN apt-get update && apt-get install -y git
 
@@ -8,6 +11,12 @@ RUN apt-get install -y --no-install-recommends openjdk-17-jdk
 
 # Pythonのコマンドを使えるようにするために、pythonのイメージでUSERを再設定
 USER root
+
+# プロジェクトファイルをコピー
+COPY Makefile /root/src/Makefile
+
+# Makeコマンドを実行してjarをビルド
+RUN make jar
 
 # Python用の設定
 RUN apt-get -y update && apt-get -y install locales && apt-get -y upgrade && \
