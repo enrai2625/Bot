@@ -39,4 +39,4 @@ EXPOSE 8080
 
    
 # DiscordBotとFastAPIのサーバ起動
-CMD [ "java","-jar","discord-bcdicebot.jar" "$DISCORD_BOT_TOKEN" "$BCDICE_API_URL" "$IGNORE_ERROR"]
+CMD [ "java","-jar","discord-bcdicebot.jar"]
