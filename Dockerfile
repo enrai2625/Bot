@@ -35,7 +35,6 @@ RUN pip install git+https://github.com/Pycord-Development/pycord
 EXPOSE 8080
 
 # ディレクトリ /root/src/appに移動
-WORKDIR /root/src/app
 
 # DiscordBotとFastAPIのサーバ起動
 CMD ["java", "-jar", "discord-bcdicebot.jar", "$DISCORD_BOT_TOKEN", "$BCDICE_API_URL", "$IGNORE_ERROR"]
