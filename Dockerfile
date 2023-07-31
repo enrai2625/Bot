@@ -9,11 +9,6 @@ ENV LC_ALL ja_JP.UTF-8
 ENV TZ JST-9
 ENV TERM xterm
 
-# ./root/src ディレクトリを作成 ホームのファイルをコピーして、移動
-RUN mkdir -p /root/src
-COPY . /root/src
-WORKDIR /root/src
-
 # Docker内で扱うffmpegをインストール
 RUN apt-get install -y ffmpeg
 
