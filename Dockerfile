@@ -1,6 +1,10 @@
 FROM python:3.10.7-slim
 
-RUN apt-get update && apt-get install -y --no-install-recommends openjdk-17-jdk
+# gitをインストール
+RUN apt-get update && apt-get install -y git
+
+# Javaのインストール
+RUN apt-get install -y --no-install-recommends openjdk-17-jdk
 
 # Pythonのコマンドを使えるようにするために、pythonのイメージでUSERを再設定
 USER root
