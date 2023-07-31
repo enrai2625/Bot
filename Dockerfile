@@ -1,4 +1,5 @@
 FROM python:3.10.7
+FROM openjdk:17
 USER root
 
 # ディレクトリ ./appに移動
