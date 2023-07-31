@@ -10,13 +10,14 @@ RUN apt-get update && apt-get install -y maven
 RUN apt-get update && apt-get install -y git
 
 # Javaのインストール
-RUN apt-get install -y --no-install-recommends openjdk-17-jdk
+RUN apt-get update && apt-get install -y --no-install-recommends openjdk-17-jdk
 
 # Pythonのコマンドを使えるようにするために、pythonのイメージでUSERを再設定
 USER root
 
 # プロジェクトファイルをコピー
 COPY Makefile /root/src/Makefile
+
 COPY . /root/src
 
 # プロジェクトディレクトリに移動
