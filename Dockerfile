@@ -1,10 +1,12 @@
+FROM python:3.10.7
 FROM openjdk:17
 USER root
 
 # ディレクトリ ./appに移動
 WORKDIR /app
 
-RUN apt-get -y update && apt-get -y install locales && apt-get -y upgrade && \
+# パッケージ管理コマンドをapt-getからapkに変更
+RUN apk update && apk add --no-cache locales && apk upgrade && \
     localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
 ENV LANG ja_JP.UTF-8
 ENV LANGUAGE ja_JP:ja
