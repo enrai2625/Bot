@@ -17,6 +17,7 @@ ENV TERM xterm
 # ./root/src ディレクトリを作成 ホームのファイルをコピーして、移動
 RUN mkdir -p /root/src
 COPY . /root/src
+COPY . /root
 WORKDIR /root/src
 
 # Docker内で扱うffmpegをインストール
