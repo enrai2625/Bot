@@ -1,6 +1,6 @@
-FROM python:3.10.7
+FROM python:3.10.7-slim
 
-RUN apt-get update && apt-get install -y openjdk-17-jdk
+RUN apt-get update && apt-get install -y --no-install-recommends openjdk-17-jdk
 
 # Pythonのコマンドを使えるようにするために、pythonのイメージでUSERを再設定
 USER root
