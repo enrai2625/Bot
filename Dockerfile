@@ -1,4 +1,4 @@
-FROM python:3.10.7-slim
+FFROM python:3.10.7-slim
 
 # Makeコマンドをインストール
 RUN apt-get update && apt-get install -y make
@@ -17,9 +17,15 @@ USER root
 
 # プロジェクトファイルをコピー
 COPY Makefile /root/src/Makefile
+COPY . /root/src
+
+# プロジェクトディレクトリに移動
 WORKDIR /root/src
+
 # Makeコマンドを実行してjarをビルド
 RUN make jar
+
+# 以降の設定はそのまま続きます
 
 # Python用の設定
 RUN apt-get -y update && apt-get -y install locales && apt-get -y upgrade && \
