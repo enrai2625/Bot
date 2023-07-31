@@ -32,9 +32,6 @@ RUN pip install git+https://github.com/Pycord-Development/pycord
 # ポート番号8080解放
 EXPOSE 8080
 #!/bin/sh
-DISCORD_BOT_TOKEN=
-BCDICE_API_URL=
-IGNORE_ERROR=
 # BCDICE_PASSWORD=PleaseChangeMeIfYouUseThis
 # BCDICE_API_SECONDARY=http://secondary.bcdice-api.yourdomain.co.jp/
 # BCDICE_DEFAULT_SYSTEM=DiceBot
