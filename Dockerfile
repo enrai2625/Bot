@@ -29,9 +29,15 @@ RUN pip install -r requirements.txt
 # discord.pyをpy-cordにアップグレード
 RUN pip install git+https://github.com/Pycord-Development/pycord
 
+# start.shをコンテナ内にコピー
+COPY start.sh /root/src/start.sh
+
+# スクリプト実行権限を付与
+RUN chmod +x /root/src/start.sh
+
 # 以下はKoyebで運用する際に必要
 # ポート番号8080解放
 EXPOSE 8080
   
 # DiscordBotとFastAPIのサーバ起動
-CMD [ "start.sh"]
+CMD ["/bin/sh", "/root/src/start.sh"]
