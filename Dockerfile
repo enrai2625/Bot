@@ -16,7 +16,6 @@ ENV TERM xterm
 RUN mkdir -p /root/src
 COPY . /root/src
 WORKDIR /root/src
-COPY . /root
 
 
 # Docker内で扱うffmpegをインストール
@@ -32,9 +31,6 @@ RUN pip install git+https://github.com/Pycord-Development/pycord
 # 以下はKoyebで運用する際に必要
 # ポート番号8080解放
 EXPOSE 8080
-
-# ディレクトリ /root/src/appに移動
-WORKDIR /root
 
 # DiscordBotとFastAPIのサーバ起動
 CMD [ "python", "-u", "main.py" ]
