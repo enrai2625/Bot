@@ -24,7 +24,7 @@ COPY . /root/src
 WORKDIR /root/src
 
 # Makeコマンドを実行してjarをビルド
-RUN make -f /root/src/Makefile jar
+CMD ["make","-f","/root/src/Makefile","jar"]
 
 # 以降の設定はそのまま続きます
 
