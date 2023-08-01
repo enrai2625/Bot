@@ -15,17 +15,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends openjdk-17-jdk
 # Pythonのコマンドを使えるようにするために、pythonのイメージでUSERを再設定
 USER root
 
-# プロジェクトファイルをコピー
-COPY Makefile /root/src/Makefile
-
-COPY . /root/src
-
-# プロジェクトディレクトリに移動
-WORKDIR /root/src
-
-# Makeコマンドを実行してjarをビルド
-CMD ["make","-f","/root/src/Makefile","jar"]
-
 # 以降の設定はそのまま続きます
 
 # Python用の設定
