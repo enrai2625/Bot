@@ -3,8 +3,8 @@ FROM python:3.10.7-slim
 # Makeコマンドをインストール
 RUN apt-get update && apt-get install -y make
 
-# Mavenをインストール
-RUN apt-get update && apt-get install -y maven
+# MavenとJavaをインストール
+RUN apt-get update && apt-get install -y maven openjdk-11-jdk
 
 # gitをインストール
 RUN apt-get update && apt-get install -y git
